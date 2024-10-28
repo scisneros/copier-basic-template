@@ -5,3 +5,6 @@ project_name:
 module_name:
   type: str
   help: Project name
+
+_envops:
+  newline_sequence: "\r\n"

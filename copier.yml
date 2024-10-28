@@ -1,0 +1,7 @@
+project_name:
+  type: str
+  help: Project name
+
+module_name:
+  type: str
+  help: Project name

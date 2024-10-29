@@ -10,6 +10,7 @@ class ExtraEnvExtension(ContextHook):
       print(extra_env)
       extra_env = json.loads(extra_env) if isinstance(extra_env, str) else extra_env
       print(extra_env)
-      self.environment.newline_sequence = extra_env.get('newline_sequence', None)
+      for key, value in extra_env.items():
+        self.environment.globals[key] = value
     
     return context

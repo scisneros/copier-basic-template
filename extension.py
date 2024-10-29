@@ -6,5 +6,6 @@ class ExtraEnvExtension(ContextHook):
     extra_env = context.get('_extra_env', {})
 
     # Add the extra environment variables to self.environment
-    for key, value in extra_env.items():
-      self.environment[key] = value
+    if extra_env:
+      for key, value in extra_env.items():
+        self.environment[key] = value

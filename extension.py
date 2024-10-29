@@ -9,3 +9,5 @@ class ExtraEnvExtension(ContextHook):
     if extra_env:
       for key, value in extra_env.items():
         self.environment[key] = value
+    
+    return context
